@@ -14,3 +14,11 @@ gulp.task('pre-commit', function(){
 		.pipe(jshint.reporter('jshint-stylish'))
 		.pipe(jshint.reporter('fail'));
 });
+
+
+gulp.task('test', function(){
+	var mocha = require('gulp-mocha');
+
+	return gulp.src('./tests/*.js', {read: false})
+		.pipe(mocha());
+});
