@@ -1,0 +1,25 @@
+{
+	"name": "seq6",
+	"description": "Seq-like library for ES6",
+	"version": "0.0.1b",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "git-guppy": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-jshint": "^1.11.2",
+    "jshint-stylish": "^2.0.1",
+    "mocha": "^2.2.5"
+  },
+	"jshintConfig": {
+	"esnext": true,
+	"eqeqeq": true,
+	"globalstrict": true,
+	"strict": true,
+	"unused": true,
+	"lastsemic": true,
+	"globals": {
+		"console": true
+		}
+	}
+}
