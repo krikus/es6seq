@@ -19,6 +19,6 @@ gulp.task('pre-commit', function(){
 gulp.task('test', function(){
 	var mocha = require('gulp-mocha');
 
-	return gulp.src('./tests/*.js', {read: false})
+	return gulp.src('./test/*.js', {read: false})
 		.pipe(mocha());
 });
