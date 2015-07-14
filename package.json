@@ -2,9 +2,9 @@
   "name": "seq6",
   "description": "Seq-like library for ES6",
   "version": "0.0.1b",
-	"scripts": {
-		"test": "node --harmony-classes `which gulp` test"
-	},
+  "scripts": {
+    "test": "node --harmony-classes `which gulp` test"
+  },
   "devDependencies": {
     "chai": "^3.0.0",
     "git-guppy": "^1.0.0",
@@ -26,5 +26,8 @@
     "globals": {
       "console": true
     }
+  },
+  "dependencies": {
+    "harmonize": "^1.4.4"
   }
 }
