@@ -27,7 +27,7 @@ describe('Seq constructor', function() {
 		expect(sum).to.be.equal(sum_of_array);
 	});
 
-	it('should take generator as param', function(){
+	it('should take generator as param', function() {
 		var generator = function*() {
 			for(var i of test_array) {
 				yield i;
@@ -35,11 +35,13 @@ describe('Seq constructor', function() {
 		};
 		var list = new Seq(generator);
 		
-		var sum = 0;
-		for(var i of generator()){
-			sum += i;
-		}
+		expect(list.sum()).to.be.equal(sum_of_array);
+	});
 
-		expect(list.sum()).to.be.equal(sum);
+	it('should take set as param', function() {
+		var set = new Set(test_array);
+		var list = new Seq(set);
+
+		expect(list.sum()).to.be.equal(sum_of_array);
 	});
 });
