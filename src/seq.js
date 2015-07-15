@@ -40,6 +40,18 @@
 			return new Seq(generator.bind(this));
 		}
 
+		find(value) {
+			for(var x of this) {
+				if(x === value) {
+					return x;
+				}
+			}
+		}
+
+		has(value) {
+			return typeof this.find(value) !== 'undefined';
+		}
+
 	}
 	
 	//TODO: make it static member of Seq
