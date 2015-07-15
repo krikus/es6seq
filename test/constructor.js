@@ -9,11 +9,14 @@ describe('Seq constructor', function() {
 	var test_array, sum_of_array = Number.MAX_SAFE_INTEGER;
 
 	beforeEach(function() {
-		test_array = [1,2,3,4,5,6,7,8,9,10];
+		test_array = [];
 		sum_of_array = 0;
 
-		for(var i of test_array) {
-			sum_of_array += i;
+		for(var i = 0; i < 50; i++)
+		{
+			let rand = ~~(Math.random() * 10000) - 500;
+			test_array.push(rand);
+			sum_of_array += rand;
 		}
 	});
 
