@@ -8,7 +8,6 @@
 			};
 		}
 
-
 		reduce(callback, aggregate) {
 			for(var i of this) {
 				aggregate = callback(aggregate, i);
@@ -27,6 +26,18 @@
 				array.push(value);
 				return array;
 			}, [] );
+		}
+
+		filter(callback) {
+			var generator = function*() {
+				for(var x of this) {
+					if(callback(x)) {
+						yield x;
+					}
+				}
+			};
+
+			return new Seq(generator.bind(this));
 		}
 
 	}
