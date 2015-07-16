@@ -1,5 +1,7 @@
-(function(module, sym_iterator) {
+(function(module, require, sym_iterator) {
 	"use strict";
+
+	var utils = require('./utils');
 
 	class Seq{
 		constructor(iterable) {
@@ -41,16 +43,27 @@
 		}
 
 		find(value) {
+			var callback = utils.makeComparator(value);
+
 			for(var x of this) {
-				if(x === value) {
+				if(callback(x)) {
 					return x;
 				}
 			}
 		}
 
 		has(value) {
-			return typeof this.find(value) !== 'undefined';
+			var callback = utils.makeComparator(value);
+
+			for(var x of this) {
+				if(callback(x)) {
+					return true;
+				}
+			}
+
+			return false;
 		}
+
 
 	}
 	
@@ -75,7 +88,10 @@
 				step += step_by;
 			}
 		});
-	}
+	};
+
+	require('./aliases')(Seq);
 
 	module.exports = Seq;
-})(module, (Symbol && Symbol.iterator ? Symbol.iterator : "@@iterator"));
+
+})(module, require, (Symbol && Symbol.iterator ? Symbol.iterator : "@@iterator"));
