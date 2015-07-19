@@ -5,7 +5,7 @@ var Seq = require('../src/seq');
 var chai = require('chai');
 var expect = chai.expect;
 
-describe('Seq has functionnality', function() {
+describe('Seq has', function() {
 	var list;
 	beforeEach(function() {
 		list = new Seq.range(0, 1000)
