@@ -64,6 +64,14 @@
 			return false;
 		}
 
+		map(callback) {
+			return new Seq(function*() {
+				for(var i of this)
+				{
+					yield callback(i);
+				}
+			}.bind(this));
+		}
 
 	}
 	
