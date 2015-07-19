@@ -34,10 +34,10 @@ describe('Seq find', function() {
 	});
 
 	it('should be able to pick object values by string', function() {
-		var list = new Seq([{user: 'admin', password: 'robot'}, {user: 'user', password: '123'}]).map();
+		var list = new Seq([{user: 'admin', password: 'robot'}, {user: 'user', password: '123'}]);
 
 		expect(list.map('user').has('admin')).to.be.true;
-		expect(list.map('password').has('robot')).to.not.be.ok;
+		expect(list.map('password').has('admin')).to.not.be.ok;
 		expect(list.map('user').has('user')).to.be.true;
 		expect(list.map('user').has('123')).to.not.be.ok;
 	});

@@ -65,14 +65,16 @@
 		}
 
 		map(callback) {
-			return new Seq(function*() {
-				for(var i of this)
-				{
+			callback = utils.makeMapPicker(callback);
+
+			var generator = function*() {
+				for(var i of this) {
 					yield callback(i);
 				}
-			}.bind(this));
-		}
+			};
 
+			return new Seq(generator.bind(this));
+		}
 	}
 	
 	//TODO: make it static member of Seq

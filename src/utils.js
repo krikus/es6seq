@@ -27,6 +27,15 @@
 					return x === something;
 				};
 			}
+		},
+		makeMapPicker: function(something) {
+			if(typeof something === 'function') {
+				return something;
+			} else {
+				return function(pickMe) {
+					return pickMe && pickMe[something];
+				};
+			}
 		}
 	};
 
