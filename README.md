@@ -31,5 +31,4 @@ ToDo:
 0. last
 0. intersection
 0. uniq
-0. falsy
 0. slice
