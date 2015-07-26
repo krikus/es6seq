@@ -16,6 +16,7 @@ ToDo:
 
 1. flatten
 2. concat
+3. compact
 3. all
 4. at
 5. max
