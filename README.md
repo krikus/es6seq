@@ -14,21 +14,22 @@ Done list:
 
 ToDo:
 
-1. flatten
-2. concat
-3. compact
-3. all
-4. at
-5. max
-6. min
-7. zip(withIndex)
-8. drop(while)
-9. take(while)
-10. without
-11. tail/initial
-12. head/first
-13. last
-14. intersection
-15. uniq
-16. falsy
-17. slice
+0. flatten
+0. concat
+0. compact
+0. chunk
+0. all
+0. at
+0. max
+0. min
+0. zip(withIndex)
+0. drop(while)
+0. take(while)
+0. without
+0. tail/initial
+0. head/first
+0. last
+0. intersection
+0. uniq
+0. falsy
+0. slice
