@@ -4,9 +4,9 @@
 
 Done list:
 
-0. concat
-0. compact
 0. chunk
+0. compact
+0. concat
 0. filter
 0. find
 0. flatten
@@ -16,22 +16,21 @@ Done list:
 0. slice (add negative values)
 0. sum (add callback, add tests)
 0. toArray (add tests)
+0. uniq
 
 ToDo:
 
-
 0. all
 0. at
+0. count (with filter)
+0. drop(while)
+0. head/first
+0. intersection
+0. isEmpty/empty property
+0. last
 0. max
 0. min
-0. zip(withIndex)
-0. drop(while)
+0. tail/initial
 0. take(while)
 0. without
-0. tail/initial
-0. head/first
-0. last
-0. intersection
-0. uniq
-0. count (with filter)
-0. isEmpty/empty property
+0. zip(withIndex)
