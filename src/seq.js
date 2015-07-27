@@ -109,7 +109,7 @@
 			var generator = function*() {
 				yield *this;
 				yield *iterable;
-			}
+			};
 			
 			return new Seq(generator.bind(this));
 		}
@@ -159,8 +159,7 @@
 			return new Seq(generator.bind(this));
 		}
 
-		uniq()
-		{
+		uniq() {
 			var generator = function*()
 			{
 				let set = new Set();
@@ -172,6 +171,12 @@
 			};
 
 			return new Seq(generator.bind(this));
+		}
+
+		count(filtering) {
+			let seq = filtering ? this.filter(filtering) : this;
+
+			return seq.reduce(function(sum){ return sum+1; }, 0);
 		}
 	}
 	
