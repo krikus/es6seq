@@ -158,6 +158,21 @@
 			
 			return new Seq(generator.bind(this));
 		}
+
+		uniq()
+		{
+			var generator = function*()
+			{
+				let set = new Set();
+				for(var i of this) {
+					if(set.has(i)) continue;
+					set.add(i);
+					yield i;
+				}
+			};
+
+			return new Seq(generator.bind(this));
+		}
 	}
 	
 	//TODO: make it static member of Seq
