@@ -138,6 +138,26 @@
 			
 			return new Seq(generator.bind(this));
 		}
+		
+		slice(from, how_many) {
+			from = from | 0;
+			how_many = how_many | 0;
+			var generator = function*() {
+				var index = 0;
+				for(var i of this) {
+					if(index >= from) {
+						yield i;
+						if(how_many>0){
+							how_many--;
+							if(!how_many){ return; }
+						}
+					}
+					index++;
+				}
+			};
+			
+			return new Seq(generator.bind(this));
+		}
 	}
 	
 	//TODO: make it static member of Seq

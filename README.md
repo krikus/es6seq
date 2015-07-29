@@ -13,6 +13,7 @@ Done list:
 0. has/any
 0. map
 0. reduce
+0. slice (add negative values)
 0. sum (add callback, add tests)
 0. toArray (add tests)
 
@@ -32,6 +33,5 @@ ToDo:
 0. last
 0. intersection
 0. uniq
-0. slice
 0. count (with filter)
 0. isEmpty/empty property
