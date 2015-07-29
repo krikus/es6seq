@@ -113,6 +113,31 @@
 			
 			return new Seq(generator.bind(this));
 		}
+		
+		flatten(deep) {
+			deep = !deep && deep !==0 ? -1 : deep;
+			var next_level = deep > 0 ? deep - 1: -1;
+			
+			var generator = function*() {
+				for(var i of this) {
+					if(i[sym_iterator]) {
+						if(deep === 0) {
+							yield i;
+						}else {
+							if(i instanceof Seq) {
+								yield *(i.flatten(next_level));
+							}else {
+								yield *(new Seq(i).flatten(next_level));
+							}
+						}
+					}else {
+						yield i;
+					}
+				}
+			};
+			
+			return new Seq(generator.bind(this));
+		}
 	}
 	
 	//TODO: make it static member of Seq

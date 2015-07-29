@@ -9,6 +9,7 @@ Done list:
 0. chunk
 0. filter
 0. find
+0. flatten
 0. has/any
 0. map
 0. reduce
@@ -17,7 +18,7 @@ Done list:
 
 ToDo:
 
-0. flatten
+
 0. all
 0. at
 0. max
