@@ -75,6 +75,12 @@
 
 			return new Seq(generator.bind(this));
 		}
+		
+		compact() {
+			return this.filter(function(value) {
+				return value;
+			});
+		}
 	}
 	
 	//TODO: make it static member of Seq

@@ -4,19 +4,19 @@
 
 Done list:
 
-1. reduce
-2. sum (add callback)
-3. toArray
-4. filter
-5. find
-6. has/any
-7. map
+0. compact
+0. filter
+0. find
+0. has/any
+0. map
+0. reduce
+0. sum (add callback, add tests)
+0. toArray
 
 ToDo:
 
 0. flatten
 0. concat
-0. compact
 0. chunk
 0. all
 0. at
