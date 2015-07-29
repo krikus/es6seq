@@ -5,7 +5,7 @@ var Seq = require('../src/seq');
 var chai = require('chai');
 var expect = chai.expect;
 
-describe('Seq filtering', function() {
+describe('Seq compact', function() {
 	it('should return Seq from compact function', function() {
 		var list = new Seq([0,1,false,2,3,4,null,5,undefined,6,7,8,9,10]);
 

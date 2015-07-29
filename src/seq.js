@@ -81,6 +81,38 @@
 				return value;
 			});
 		}
+		
+		chunk(size) {
+			//TODO: change size to size=1 and remove code below
+			size = size || 1;
+			
+			var generator = function*() {
+				var chunk = [];
+				for(var i of this) {
+					chunk.push(i);
+					if(chunk.length >= size)
+					{
+						yield chunk;
+						chunk = [];
+					}
+				}
+				if(chunk.length) {
+					yield chunk;
+				}
+			};
+			
+			return new Seq(generator.bind(this));
+		}
+		
+		concat(iterable) {
+			iterable = (iterable instanceof Seq) ? iterable : new Seq(iterable);
+			var generator = function*() {
+				yield *this;
+				yield *iterable;
+			}
+			
+			return new Seq(generator.bind(this));
+		}
 	}
 	
 	//TODO: make it static member of Seq

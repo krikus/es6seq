@@ -4,20 +4,20 @@
 
 Done list:
 
+0. concat
 0. compact
+0. chunk
 0. filter
 0. find
 0. has/any
 0. map
 0. reduce
 0. sum (add callback, add tests)
-0. toArray
+0. toArray (add tests)
 
 ToDo:
 
 0. flatten
-0. concat
-0. chunk
 0. all
 0. at
 0. max
@@ -32,3 +32,5 @@ ToDo:
 0. intersection
 0. uniq
 0. slice
+0. count (with filter)
+0. isEmpty/empty property
