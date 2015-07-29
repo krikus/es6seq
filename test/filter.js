@@ -51,7 +51,7 @@ describe('Seq filtering', function() {
 		expect(filtered.toArray()).to.be.deep.equal([0,2,4]);
 	});
 
-	it('should be repeptable on same instance', function() {
+	it('should be repeatable on same instance', function() {
 		var list = new Seq([-5,-4,-3,-2,-1,0,1,2,3,4,5]);
 
 		var filtered_positive = list.filter(function(x) {
