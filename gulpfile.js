@@ -35,7 +35,7 @@ gulp.task('coverage', function() {
 				.pipe(mocha())
 				.pipe(istanbul.writeReports({
 					dir: './coverage',
-					reporters: ['text-summary', 'html', 'lcov']
+					reporters: ['text-summary', 'lcov']
 				}));
 		});
 });
