@@ -27,12 +27,12 @@ Done list:
 0. tail
 0. toArray (add tests)
 0. uniq
+0. isEmpty
 
 ToDo:
 
 0. at
 0. intersection
-0. isEmpty/empty property
 0. last
 0. max
 0. min

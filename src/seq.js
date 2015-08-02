@@ -119,6 +119,12 @@
 				.reverse();
 		}
 
+		isEmpty() {
+			let temp_generator = this[sym_iterator]();
+
+			return temp_generator.next().done;
+		}
+
 		drop(numberOrFunction) {
 			let temp_generator = this[sym_iterator]();
 			let value = temp_generator.next();
