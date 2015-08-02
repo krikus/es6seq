@@ -41,8 +41,4 @@ gulp.task('coverage', function() {
 });
 
 gulp.task('travis', ['coverage'], function() {
-	var codecov = require('gulp-codecov.io');
-
-	gulp.src('./coverage/lcov.info')
-		.pipe(codecov());
 });
