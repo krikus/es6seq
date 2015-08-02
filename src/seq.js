@@ -99,6 +99,22 @@
 				return value;
 			});
 		}
+
+		tail() {
+			let temp_generator = this[sym_iterator]();
+
+			let value = temp_generator.next();
+
+			let generator = function*() {
+				value = temp_generator.next();
+				while(!value.done) {
+					yield value.value;
+					value = temp_generator.next();
+				}
+			};
+
+			return new Seq(generator);
+		}
 		
 		chunk(size) {
 			//TODO: change size to size=1 and remove code below

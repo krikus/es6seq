@@ -21,6 +21,7 @@ Done list:
 0. reverse
 0. slice (add negative values)
 0. sum (add callback, add tests)
+0. tail
 0. toArray (add tests)
 0. uniq
 
@@ -33,7 +34,7 @@ ToDo:
 0. last
 0. max
 0. min
-0. tail/initial
+0. initial
 0. take(while+right)
 0. without
 0. zip(withIndex)
