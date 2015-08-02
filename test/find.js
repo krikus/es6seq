@@ -81,4 +81,11 @@ describe('Seq find', function() {
 		expect(list.find([1,3,3,7])).to.be.deep.equal([1,3,3,7]);
 	});
 
+	it('should work with finding object mixed in numbers', function() {
+		var list = new Seq([1,2,3,{user: 'admin'}]);
+
+		expect(list.find({user: 'admin'})).to.be.ok;
+		expect(list.find({user: 'robot'})).to.be.not.ok;
+	});
+
 });
