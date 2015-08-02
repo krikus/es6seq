@@ -70,6 +70,15 @@
 			}
 		}
 
+		last() {
+			let to_return;
+			for(var x of this) {
+				to_return = x;
+			}
+
+			return to_return;
+		}
+
 		has(value) {
 			var callback = utils.makeComparator(value);
 
@@ -104,6 +113,12 @@
 			return this.drop(1);
 		}
 
+		initial() {
+			return this.reverse()
+				.drop(1)
+				.reverse();
+		}
+
 		drop(numberOrFunction) {
 			let temp_generator = this[sym_iterator]();
 			let value = temp_generator.next();
@@ -127,7 +142,14 @@
 
 			return new Seq(generator);
 		}
-		
+
+		//TODO: add buffer optimization
+		dropRight(numberOrFunction) {
+			return this.reverse()
+				.drop(numberOrFunction)
+				.reverse();
+		}
+
 		chunk(size) {
 			//TODO: change size to size=1 and remove code below
 			size = size || 1;

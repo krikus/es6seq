@@ -11,11 +11,14 @@ Done list:
 0. compact
 0. concat
 0. count (with filter)
+0. drop
+0. dropRight
 0. filter
 0. find
 0. flatten
 0. has/any
 0. head/first
+0. initial
 0. map
 0. reduce (add default value 0)
 0. reverse
@@ -28,13 +31,11 @@ Done list:
 ToDo:
 
 0. at
-0. drop(while+right)
 0. intersection
 0. isEmpty/empty property
 0. last
 0. max
 0. min
-0. initial
 0. take(while+right)
 0. without
 0. zip(withIndex)
