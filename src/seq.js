@@ -101,12 +101,24 @@
 		}
 
 		tail() {
-			let temp_generator = this[sym_iterator]();
+			return this.drop(1);
+		}
 
+		drop(numberOrFunction) {
+			let temp_generator = this[sym_iterator]();
 			let value = temp_generator.next();
 
+			if(typeof numberOrFunction === 'function') {
+				while(!value.done && numberOrFunction(value.value)) {
+					value = temp_generator.next();
+				}
+			} else {
+				while(!value.done && numberOrFunction-- > 0) {
+					value = temp_generator.next();
+				}
+			}
+
 			let generator = function*() {
-				value = temp_generator.next();
 				while(!value.done) {
 					yield value.value;
 					value = temp_generator.next();
