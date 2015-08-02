@@ -3,12 +3,13 @@
   "description": "Seq-like library for ES6",
   "version": "0.0.1b",
   "scripts": {
-    "test": "node --harmony-classes `which gulp` test"
+    "test": "node --harmony-classes `which gulp` test:coverage"
   },
   "devDependencies": {
     "chai": "^3.0.0",
     "git-guppy": "^1.0.0",
     "gulp": "^3.9.0",
+    "gulp-codecov.io": "^1.0.1",
     "gulp-filter": "^2.0.2",
     "gulp-istanbul": "^0.10.0",
     "gulp-jshint": "^1.11.2",
@@ -30,6 +31,7 @@
     }
   },
   "dependencies": {
+    "codecov.io": "^0.1.5",
     "harmonize": "^1.4.4"
   }
 }

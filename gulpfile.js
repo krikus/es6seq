@@ -39,3 +39,10 @@ gulp.task('coverage', function() {
 				}));
 		});
 });
+
+gulp.task('test:coverage', ['coverage'], function() {
+	var codecov = require('gulp-codecov.io');
+
+	gulp.src('./coverage/lcov.info')
+		.pipe(codecov());
+});
