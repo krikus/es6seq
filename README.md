@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/krikus/es6seq.svg?branch=master)](https://travis-ci.org/krikus/es6seq)
+[![codecov.io](http://codecov.io/github/krikus/es6seq/coverage.svg?branch=master)](http://codecov.io/github/krikus/es6seq?branch=master)
+
 
 # Seq library for ES6
 
