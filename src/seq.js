@@ -64,6 +64,12 @@
 			return true;
 		}
 
+		first() {
+			for(var x of this) {
+				return x;
+			}
+		}
+
 		has(value) {
 			var callback = utils.makeComparator(value);
 

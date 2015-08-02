@@ -15,6 +15,7 @@ Done list:
 0. find
 0. flatten
 0. has/any
+0. head/first
 0. map
 0. reduce (add default value 0)
 0. reverse
@@ -27,7 +28,6 @@ ToDo:
 
 0. at
 0. drop(while+right)
-0. head/first
 0. intersection
 0. isEmpty/empty property
 0. last
