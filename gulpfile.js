@@ -2,7 +2,7 @@
 /* jshint node: true */
 var gulp = require('gulp');
 
-gulp.task('pre-commit', function(){
+gulp.task('pre-commit', function() {
 	var guppy = require('git-guppy')(gulp);
 	var gulpFilter = require('gulp-filter');
 	var jshint = require('gulp-jshint');
@@ -16,9 +16,26 @@ gulp.task('pre-commit', function(){
 });
 
 
-gulp.task('test', function(){
+gulp.task('test', function() {
 	var mocha = require('gulp-mocha');
 
 	return gulp.src('./test/*.js', {read: false})
 		.pipe(mocha());
+});
+
+gulp.task('coverage', function() {
+	var istanbul = require('gulp-istanbul');
+	var mocha = require('gulp-mocha');
+
+	gulp.src('./src/*.js')
+		.pipe(istanbul({includeUntested:true}))
+		.pipe(istanbul.hookRequire())
+		.on('finish', function() {
+			gulp.src('./test/*.js')
+				.pipe(mocha())
+				.pipe(istanbul.writeReports({
+					dir: './coverage',
+					reporters: ['text-summary', 'html', 'lcov']
+				}));
+		});
 });
