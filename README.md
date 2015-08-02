@@ -4,6 +4,7 @@
 
 Done list:
 
+0. all
 0. chunk
 0. compact
 0. concat
@@ -22,7 +23,6 @@ Done list:
 
 ToDo:
 
-0. all
 0. at
 0. drop(while+right)
 0. head/first

@@ -52,6 +52,18 @@
 			}
 		}
 
+		all(value) {
+			var callback = utils.makeComparator(value);
+
+			for(var x of this) {
+				if(!callback(x)) {
+					return false;
+				}
+			}
+
+			return true;
+		}
+
 		has(value) {
 			var callback = utils.makeComparator(value);
 

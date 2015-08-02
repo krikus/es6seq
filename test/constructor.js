@@ -14,7 +14,7 @@ describe('Seq constructor', function() {
 
 		for(var i = 0; i < 50; i++)
 		{
-			let rand = ~~(Math.random() * 10000) - 500;
+			let rand = i * 1000 + ~~(Math.round() * 200);
 			test_array.push(rand);
 			sum_of_array += rand;
 		}
