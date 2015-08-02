@@ -178,6 +178,15 @@
 
 			return seq.reduce(function(sum){ return sum+1; }, 0);
 		}
+
+		reverse() {
+			let data = this.reduce(function(sum, element) {
+				sum.unshift(element);
+				return sum;
+			}, []);
+
+			return new Seq(data);
+		}
 	}
 	
 	//TODO: make it static member of Seq

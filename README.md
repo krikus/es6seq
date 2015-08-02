@@ -14,6 +14,7 @@ Done list:
 0. has/any
 0. map
 0. reduce (add default value 0)
+0. reverse
 0. slice (add negative values)
 0. sum (add callback, add tests)
 0. toArray (add tests)
@@ -23,7 +24,7 @@ ToDo:
 
 0. all
 0. at
-0. drop(while)
+0. drop(while+right)
 0. head/first
 0. intersection
 0. isEmpty/empty property
@@ -31,6 +32,6 @@ ToDo:
 0. max
 0. min
 0. tail/initial
-0. take(while)
+0. take(while+right)
 0. without
 0. zip(withIndex)
