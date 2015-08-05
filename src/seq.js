@@ -146,7 +146,7 @@
 				}
 			};
 
-			return new Seq(generator);
+			return new Seq(generator.bind(this));
 		}
 
 		//TODO: add buffer optimization
@@ -169,7 +169,7 @@
 
 			let generator = function*() {
 				for(var i of this) {
-					if(!takeChecker()) {
+					if(!takeChecker(i)) {
 						return;
 					}
 					yield i;
