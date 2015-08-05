@@ -176,7 +176,7 @@
 				}
 			};
 
-			return new Seq(generator);
+			return new Seq(generator.bind(this));
 		}
 		
 		takeRight(numberOrFunction) {
