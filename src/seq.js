@@ -308,7 +308,7 @@
 
 		return new Seq(function*() {
 			let step = 0;
-			while( comparator(from + step, to) ) {
+			while(comparator(from + step, to)) {
 				yield from + step;
 				step += step_by;
 			}

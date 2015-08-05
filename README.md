@@ -6,10 +6,10 @@
 
 Done list:
 
-0. all
+0. all (add every alias)
 0. chunk
-0. compact
-0. concat
+0. compact 
+0. concat (add multiple params)
 0. count (with filter)
 0. drop
 0. dropRight
@@ -25,7 +25,7 @@ Done list:
 0. reverse
 0. slice (add negative values)
 0. sum (add callback, add tests)
-0. tail
+0. tail (add rest alias)
 0. take
 0. takeRight
 0. toArray (add tests)
@@ -34,9 +34,17 @@ Done list:
 
 ToDo:
 
+0. each/forEach
+0. groupBy
 0. at
 0. intersection
+0. union
+0. difference
 0. max
 0. min
 0. without
 0. zip(withIndex)
+0. unzip
+0. sort(heavy!)
+0. shuffle
+0. sample
