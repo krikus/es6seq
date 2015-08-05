@@ -155,6 +155,35 @@
 				.drop(numberOrFunction)
 				.reverse();
 		}
+		
+		take(numberOrFunction) {
+			let takeChecker;
+
+			if(typeof numberOrFunction === 'function') {
+				takeChecker = numberOrFunction;
+			} else {
+				takeChecker = function() {
+					return numberOrFunction-- > 0;	
+				};
+			}
+
+			let generator = function*() {
+				for(var i of this) {
+					if(!takeChecker()) {
+						return;
+					}
+					yield i;
+				}
+			};
+
+			return new Seq(generator);
+		}
+		
+		takeRight(numberOrFunction) {
+			return this.reverse()
+				.take(numberOrFunction)
+				.reverse();
+		}
 
 		chunk(size) {
 			//TODO: change size to size=1 and remove code below
