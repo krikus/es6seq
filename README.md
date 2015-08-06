@@ -18,7 +18,7 @@ Done list:
 0. flatten
 0. has/any
 0. head/first
-0. initial
+0. initial (add optimizations)
 0. last
 0. map
 0. reduce (add default value 0)
