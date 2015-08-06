@@ -5,7 +5,7 @@ var Seq = require('../src/seq');
 var chai = require('chai');
 var expect = chai.expect;
 
-describe('Seq tail', function() {
+describe('Seq take', function() {
 	it('should work with callback', function() {
 		let seq = new Seq([7,1,2,-1,-5,3,4,6]);
 		let callback = function(x) {
