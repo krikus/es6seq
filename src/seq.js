@@ -231,7 +231,7 @@
 					yield *makeSeq(iterable);
 				}
 			};
-			
+
 			return new Seq(generator.bind(this));
 		}
 		
@@ -241,7 +241,7 @@
 			
 			var generator = function*() {
 				for(var i of this) {
-					if(i[sym_iterator]) {
+					if(i && i[sym_iterator]) {
 						if(deep === 0) {
 							yield i;
 						}else {

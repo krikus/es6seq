@@ -50,4 +50,10 @@ describe('Seq flatten', function() {
 		
 		expect(seq.flatten(2).toArray()).to.be.deep.equal([1,2,3,4,[5],6,7]);
 	});
+
+	it('should be able to handle false nulls and undefined when flattening', function() {
+		var seq = new Seq([1,[2],[3,null,[4,[5,false]]],[6,undefined],7]);
+
+		expect(seq.flatten(2).toArray()).to.be.deep.equal([1,2,3,null,4,[5,false],6,undefined,7]);
+	});
 });
