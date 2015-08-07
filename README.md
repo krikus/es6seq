@@ -9,16 +9,18 @@ Done list:
 0. all
 0. chunk
 0. compact 
-0. concat (add multiple params)
+0. concat
 0. count
 0. drop
 0. dropRight
 0. filter
 0. find
 0. flatten
+0. groupBy
 0. has/any
 0. head/first
 0. initial (add optimizations)
+0. isEmpty
 0. last
 0. map
 0. reduce
@@ -30,12 +32,10 @@ Done list:
 0. takeRight
 0. toArray
 0. uniq
-0. isEmpty
 
 ToDo:
 
 0. each/forEach
-0. groupBy
 0. at
 0. intersection
 0. union
@@ -44,7 +44,7 @@ ToDo:
 0. min
 0. without
 0. zip(withIndex)
-0. unzip
+0. unzip(heavy!)
 0. sort(heavy!)
 0. shuffle
 0. sample

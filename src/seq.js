@@ -10,6 +10,10 @@
 			};
 		}
 
+		get empty() {
+			return new Seq([]);
+		}
+
 		reduce(callback, aggregate) {
 			if(typeof aggregate === 'undefined'){ 
 				aggregate = 0;
@@ -256,24 +260,8 @@
 			return new Seq(generator.bind(this));
 		}
 		
-		slice(from, how_many) {
-			from = from | 0;
-			how_many = how_many | 0;
-			var generator = function*() {
-				var index = 0;
-				for(var i of this) {
-					if(index >= from) {
-						yield i;
-						if(how_many>0){
-							how_many--;
-							if(!how_many){ return; }
-						}
-					}
-					index++;
-				}
-			};
-			
-			return new Seq(generator.bind(this));
+		slice(from, to) {
+			return new Seq(this.toArray().slice(from, to));
 		}
 
 		uniq() {
