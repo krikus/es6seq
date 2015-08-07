@@ -21,9 +21,12 @@
 			return aggregate;
 		}
 
-		sum() {
+		sum(callback) {
+			if(typeof callback !== 'function') {
+				callback = function(x){ return x };
+			}
 			//TODO: use fat arrow
-			return this.reduce(function(sum, x){ return sum + x; }, 0);
+			return this.reduce(function(sum, x){ return sum + callback( x ); }, 0);
 		}
 
 		toArray() {
