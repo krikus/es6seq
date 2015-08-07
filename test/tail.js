@@ -24,4 +24,12 @@ describe('Seq tail', function() {
 
 		expect(seq.tail().toArray()).to.be.deep.equal([]);
 	});
+	
+	it('should have rest alias', function() {
+		var seq = Seq.range(0, 1);
+
+		expect(seq.rest).to.be.a.function;
+		expect(seq.rest).to.be.deep.equal(seq.tail);
+		expect(seq.rest().toArray()).to.be.deep.equal([1]);
+	});
 });

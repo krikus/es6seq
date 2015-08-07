@@ -6,7 +6,8 @@
 		var aliases = {
 			any: 'has',
 			every: 'all',
-			head: 'first'
+			head: 'first',
+			rest: 'tail'
 		};
 
 		Object.keys(aliases).forEach(function(key) {

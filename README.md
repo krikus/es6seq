@@ -21,10 +21,10 @@ Done list:
 0. initial (add optimizations)
 0. last
 0. map
-0. reduce (add default value 0)
+0. reduce
 0. reverse
 0. slice (add negative values)
-0. sum (add callback, add tests)
+0. sum
 0. tail (add rest alias)
 0. take
 0. takeRight
