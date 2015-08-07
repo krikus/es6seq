@@ -20,4 +20,12 @@ describe('Seq all', function() {
 		expect(result).to.be.equal.false;
 	});
 
+	it('should have alias "every"', function() {
+		var result = list.every(function(x) { return x % 2 === 0;});
+
+		expect(result).to.be.equal.true;
+		expect(list.every).to.be.a.function;
+		expect(list.every).to.be.deep.equal(list.all);
+	});
+
 });

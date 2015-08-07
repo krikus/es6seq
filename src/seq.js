@@ -207,11 +207,18 @@
 			return new Seq(generator.bind(this));
 		}
 		
-		concat(iterable) {
-			iterable = (iterable instanceof Seq) ? iterable : new Seq(iterable);
+		//TODO: change to ...iterables
+		concat() {
+			let iterables = [].slice.call(arguments, 0);
+			let makeSeq = function(iterable) {
+				return (iterable instanceof Seq) ? iterable : new Seq(iterable);
+			};
+
 			var generator = function*() {
 				yield *this;
-				yield *iterable;
+				for(var iterable of iterables) {
+					yield *makeSeq(iterable);
+				}
 			};
 			
 			return new Seq(generator.bind(this));
@@ -277,7 +284,7 @@
 		}
 
 		count(filtering) {
-			let seq = filtering ? this.filter(filtering) : this;
+			let seq = typeof filtering === 'function' ? this.filter(filtering) : this;
 
 			return seq.reduce(function(sum){ return sum+1; }, 0);
 		}

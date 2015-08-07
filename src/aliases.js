@@ -5,6 +5,7 @@
 
 		var aliases = {
 			any: 'has',
+			every: 'all',
 			head: 'first'
 		};
 

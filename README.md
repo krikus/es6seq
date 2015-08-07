@@ -6,11 +6,11 @@
 
 Done list:
 
-0. all (add every alias)
+0. all
 0. chunk
 0. compact 
 0. concat (add multiple params)
-0. count (with filter)
+0. count
 0. drop
 0. dropRight
 0. filter

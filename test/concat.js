@@ -59,4 +59,20 @@ describe('Seq concat', function() {
 		
 		expect(result.toArray()).to.be.deep.equal([-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10]);
 	});
+
+	it('should take multiple parameters', function() {
+		var generator = function*() {
+			yield 1;
+			yield 2;
+			yield 3;
+		};
+		var first = Seq.range(-5,0);
+		var list = new Seq([4,5]);
+		var array = [6,7,8,9,10];
+		
+		var result = first.concat(generator, list, array);
+		
+		expect(result.toArray()).to.be.deep.equal([-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10]);
+
+	});
 });
