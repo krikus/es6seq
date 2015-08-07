@@ -11,6 +11,10 @@
 		}
 
 		reduce(callback, aggregate) {
+			if(typeof aggregate === 'undefined'){ 
+				aggregate = 0;
+			}
+
 			for(var i of this) {
 				aggregate = callback(aggregate, i);
 			}
