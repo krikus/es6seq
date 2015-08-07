@@ -25,10 +25,10 @@ Done list:
 0. reverse
 0. slice (add negative values)
 0. sum
-0. tail (add rest alias)
+0. tail
 0. take
 0. takeRight
-0. toArray (add tests)
+0. toArray
 0. uniq
 0. isEmpty
 
