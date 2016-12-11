@@ -3,7 +3,7 @@
   "description": "Seq-like library for ES6",
   "version": "0.0.1b",
   "scripts": {
-    "test": "node --harmony-classes `which gulp` travis"
+    "test": "node `which gulp` travis"
   },
   "devDependencies": {
     "chai": "^3.0.0",
